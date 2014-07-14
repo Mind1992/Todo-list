@@ -10,25 +10,38 @@
 <body>
   <div class="container">
     <div class="row">
-      <h1>To-do List</h1>
+
+      <h1 class="text-center">Ain't Nobody Got Time for That</h1>
       <form class="form-horizontal" role="form" id="task">
         <div class="form-group">
-          <label for="task-name" class="col-sm-2 control-label">Enter A Task:</label>
 
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="task-name" placeholder="Wash the car">
+          <label for="task-name" class="col-sm-2 control-label">Enter A Task:</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="task-name" placeholder="Pay the bills">
+          </div>
+
+          <label for="due-date" class="col-sm-2 control-label">Due Date:</label>
+          <div class="col-sm-4">
+            <input type="date" class="form-control" id="due-date" placeholder="7/14/2014">
           </div>
         </div>
 
-        <button type="submit" class="btn btn-default btn-block">Add Task</button>
+        <button type="submit" class="btn btn-default btn-block btn-success">Stress Me Out</button>
 
+        <table class="table table-hover table-condensed">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Due</th>
+            <th>Complete</th>
+          </tr>
+        <tbody class="tasks">
+        </tbody>
+        </thead>
+      </table>
+      <button type="submit" class="btn btn-default btn-block btn-danger" id="clear">Clear Out</button>
       </form>
 
-      <div class="task-list">
-        <ul class="tasks">
-
-        </ul>
-      </div>
     </div>
   </div>
 </body>

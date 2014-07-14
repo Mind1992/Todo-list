@@ -3,10 +3,22 @@ $(document).ready(function(){
     event.preventDefault();
 
     var inputtedTask = $("input#task-name").val();
-    var task = { name: inputtedTask };
+    var inputtedDate = $("input#due-date").val();
 
-    $("ul.tasks").append("<li><span class='addedTask'>" + task.name + "</span></li>");
+    var task = { name: inputtedTask, date: inputtedDate };
+
+    $("tbody.tasks").append("<tr>" + "<td class='task'>" + task.name + "</td>" + "<td class='due'>" + task.date + "</td>" + "<td class='check'>" + "<input type='checkbox'>" + "</tr>");
 
     $("input#task-name").val("");
   });
+
+  $("button#clear").click(function(){
+    $("td.task").remove();
+    alert("task");
+    $("td.due").remove();
+    alert("due");
+    $("td.check").remove();
+    alert("check");
+  });
+
 });
