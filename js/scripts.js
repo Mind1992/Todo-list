@@ -7,18 +7,13 @@ $(document).ready(function(){
 
     var task = { name: inputtedTask, date: inputtedDate };
 
-    $("tbody.tasks").append("<tr>" + "<td class='task'>" + task.name + "</td>" + "<td class='due'>" + task.date + "</td>" + "<td class='check'>" + "<input type='checkbox'>" + "</tr>");
+    $("tbody.tasks").append("<tr>" + "<td class='tasks'>" + task.name + "</td>" + "<td class='due'>" + task.date + "</td>" + "<td>" + "<input type='checkbox'>" + "</tr>");
+
+
 
     $("input#task-name").val("");
   });
-
   $("button#clear").click(function(){
-    $("td.task").remove();
-    alert("task");
-    $("td.due").remove();
-    alert("due");
-    $("td.check").remove();
-    alert("check");
+    $("tbody.tasks").empty();
   });
-
 });
